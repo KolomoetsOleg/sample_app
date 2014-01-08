@@ -1,7 +1,15 @@
 SampleApp::Application.routes.draw do
-  get "static_pages/home"
 
-  get "static_pages/help"
+  root to: "static_pages#home"
+  match '/signup',  to: 'users#new',via: 'get'
 
-  get "static_pages/about"
+  resources :static_pages, except: [:index, :new, :create, :show, :update, :edit, :destroy] do
+    collection do
+      get :help
+      get :about
+      get :contact
+      get :sign_up
+      get :sign_in
+    end
+  end
 end
