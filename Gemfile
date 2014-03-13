@@ -10,7 +10,7 @@ end
 gem 'jquery-rails'
 gem 'api-versions'
 gem 'apipie-rails'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'bootstrap-sass', '>= 3.0.0.0'
 gem 'devise'
 gem 'figaro'
