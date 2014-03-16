@@ -10,4 +10,40 @@ describe "User pages" do
     it { should have_title(full_title('Sign up')) }
 
   end
+
+  describe "profile page" do
+    let(:user) {FactoryGirl.create(:user)}
+    before {visit user_path(user)}
+
+    it {should have_content(user.name)}
+    it {should have_title(user.name)}
+  end
+
+  describe "Sign up page" do
+    before{ visit signup_path}
+
+    let(:submit){"Create my account"}
+
+    describe "with invalid information" do
+
+      it "should not create new user" do
+        expect{click_button "Create my account"}.not_to change(User, :count)
+      end
+    end
+
+    describe "with valid information" do
+
+      before do
+        fill_in "Name",             with: "Example User"
+        fill_in "Email",            with: "user@example.com"
+        fill_in "Password",         with: "123456789"
+        fill_in "Password confirmation",     with: "123456789"
+      end
+
+      it "should create a new user" do
+        expect{click_button "Create my account"}.to change(User, :count).by(1)
+      end
+
+    end
+  end
 end

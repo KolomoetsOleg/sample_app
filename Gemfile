@@ -1,17 +1,18 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
-gem 'rails', '3.2.12'
+gem 'rails', '4.0.2'
 gem 'sqlite3'
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'coffee-rails'#, '~> 3.2.1'
+  gem 'uglifier'#, '>= 1.0.3'
 end
 gem 'jquery-rails'
 gem 'api-versions'
 gem 'apipie-rails'
-gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'bootstrap-sass', '>= 3.0.0.0'
+gem 'bcrypt-ruby'#, '~> 3.0.0'
+gem 'bootstrap-sass'#, '>= 3.0.0.0'
+gem 'bootstrap-will_paginate'
 gem 'devise'
 gem 'figaro'
 gem 'haml-rails'
@@ -36,6 +37,7 @@ group :production do
 end
 group :test do
   gem 'capybara'
-  gem 'database_cleaner', '1.0.1'
+  gem 'database_cleaner'#, '1.0.1'
   gem 'email_spec'
+  gem 'factory_girl_rails'
 end

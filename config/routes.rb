@@ -12,4 +12,8 @@ SampleApp::Application.routes.draw do
       get :sign_in
     end
   end
+
+  resources :users do
+
+  end
 end
