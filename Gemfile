@@ -7,11 +7,13 @@ group :assets do
   gem 'coffee-rails'#, '~> 3.2.1'
   gem 'uglifier'#, '>= 1.0.3'
 end
+gem 'turbolinks'
 gem 'jquery-rails'
 gem 'api-versions'
 gem 'apipie-rails'
 gem 'bcrypt-ruby'#, '~> 3.0.0'
-gem 'bootstrap-sass'#, '>= 3.0.0.0'
+gem 'twitter-bootstrap-rails'
+gem 'bootstrap-sass', '2.3.2.0'
 gem 'bootstrap-will_paginate'
 gem 'devise'
 gem 'figaro'
@@ -40,4 +42,5 @@ group :test do
   gem 'database_cleaner'#, '1.0.1'
   gem 'email_spec'
   gem 'factory_girl_rails'
+  gem 'cucumber-rails', require: false
 end
