@@ -1,0 +1,24 @@
+- provide(:title, "Edit user")
+%h1 Update your profile
+
+.row
+  .col-md-6.col-md-offset-3
+    =form_for @user do |user|
+      = render 'shared/error_messages'
+
+      = user.label :name
+      = user.text_field :name
+
+      = user.label :email
+      = user.text_field :email
+
+      = user.label :password
+      = user.password_field :password
+
+      = user.label :password_confirmation
+      = user.password_field :password_confirmation
+
+      = user.submit "Save changes", class: "btn btn-large btn-primary"
+
+    = gravatar_for @user
+    = link_to "change", 'http://gravatar.com/emails'

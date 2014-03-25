@@ -102,6 +102,8 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    faker (1.1.2)
+      i18n (~> 0.5)
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
@@ -257,6 +259,7 @@ DEPENDENCIES
   devise
   email_spec
   factory_girl_rails
+  faker (= 1.1.2)
   figaro
   haml-rails
   html2haml
@@ -274,3 +277,4 @@ DEPENDENCIES
   turbolinks
   twitter-bootstrap-rails
   uglifier
+  will_paginate

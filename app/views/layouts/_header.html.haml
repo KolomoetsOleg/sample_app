@@ -7,14 +7,14 @@
           %li= link_to "Home", root_path
           %li= link_to "Help", help_static_pages_path
           - if signed_in?
-            %li= link_to "Users", "#"
+            %li= link_to "Users", users_path
             %li.dropdown
               %a.dropdown_toggle{href: "#", "data-toggle" => "dropdown" }
                 Acccount
                 %b.caret
               %ul.drop_down-menu
                 %li= link_to "Profile", current_user
-                %li= link_to "Settings", "#"
+                %li= link_to "Settings", edit_user_path(current_user)
                 %li.divider
                 %li= link_to "Sign out", signout_path, method: :delete
           - else
