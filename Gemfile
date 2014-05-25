@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '4.0.2'
-gem 'sqlite3'
+gem 'mysql2'
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
   gem 'coffee-rails'#, '~> 3.2.1'
@@ -37,7 +37,6 @@ group :development, :test do
 end
 group :production do
   gem 'passenger'
-  gem 'pg'
 end
 group :test do
   gem 'capybara'

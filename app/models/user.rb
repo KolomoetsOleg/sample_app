@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-  #attr_accessible :email, :name, :password, :password_confirmation
-  #attr_accessor :password, :password_confirmation
+  has_many :microposts, dependent: :destroy
 
   validates_presence_of :name
   validates_length_of :name, maximum: 25
